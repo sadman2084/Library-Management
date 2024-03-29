@@ -47,12 +47,12 @@ class LibraryGUI:
         """Gets book title from entry and adds it to the library."""
         book_title = self.num_books_entry.get()
         self.library.add_book(book_title)
-        self.num_books_entry.delete(0, "end")  # Clear entry field
+        self.num_books_entry.delete(0, "end")  
 
     def show_books(self):
         """Updates the text box with the library information."""
         book_info = self.library.show_books()
-        self.book_list_text.delete("1.0", "end")  # Clear text box
+        self.book_list_text.delete("1.0", "end")
         self.book_list_text.insert("1.0", book_info)
 
     def run(self):
